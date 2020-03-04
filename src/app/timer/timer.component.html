@@ -1,0 +1,22 @@
+<div>
+  <div>{{ minutes | numberpad:2 }}:{{ seconds | numberpad:2}}</div>
+  <br />
+  <input
+    type="button"
+    (click)="start()"
+    [disabled]="running"
+    value="START"
+  />
+  <input
+    type="button"
+    (click)="stop()"
+    [disabled]="!running"
+    value="STOP"
+  />
+  <input
+    type="button"
+    (click)="clear()"
+    [disabled]="running"
+    value="CLEAR"
+  />
+</div>
